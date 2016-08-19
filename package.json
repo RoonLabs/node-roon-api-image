@@ -1,5 +1,5 @@
 {
-  "name": "roon-api-image",
+  "name": "node-roon-api-image",
   "version": "1.0.0",
   "description": "Roon Api Image Service (com.roonlabs.image:1)",
   "main": "lib.js",
