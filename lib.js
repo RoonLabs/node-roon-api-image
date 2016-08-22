@@ -8,7 +8,12 @@ function RoonApiImage(core) {
 
 RoonApiImage.services = [ { name: SVCNAME } ];
 
-RoonApiImage.prototype.get_image = function(image_key, opts, cb) {
+RoonApiImage.prototype.get_image = function() {
+    var i = 0;
+    let image_key = arguments[i++];
+    let opts = {};
+    if (typeof(arguments[i]) != "function") opts = arguments[i++];
+    let cb  = arguments[i++];
     opts = Object.assign({ image_key: image_key }, opts);
     this.core.moo.send_request(SVCNAME+"/get_image",
                                opts,
